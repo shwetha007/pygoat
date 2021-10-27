@@ -17,7 +17,7 @@ pipeline {
           snykInstallation: 'mySnyk',
           snykTokenId: 'mySnkToken',
           // place other parameters here
- 	  targetFile: 'requirements.txt',
+ 	  //targetFile: 'requirements.txt',
 	additionalArguments: '--package-manager=pip --command=python3 -- --allow-missing'
 	  
         )
