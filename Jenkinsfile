@@ -18,7 +18,7 @@ pipeline {
           snykTokenId: 'mySnkToken',
           // place other parameters here
  	  targetFile: 'requirements.txt',
-	additionalArguments: '--package-manager=pip --command=python3 --allow-missing --all-projects'
+	additionalArguments: '--package-manager=pip --command=python3 --all-projects -- --allow-missing'
 	  
         )
       }
