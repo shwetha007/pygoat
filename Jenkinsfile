@@ -15,10 +15,10 @@ pipeline {
         echo 'Testing...'
         snykSecurity(
           snykInstallation: 'mySnyk',
-          snykTokenId: 'mySnkToken'
+          snykTokenId: 'mySnkToken',
           // place other parameters here
- 	  //targetFile: 'req.txt',
-	//additionalArguments: '--package-manager=pip'
+ 	  targetFile: 'requirements.txt',
+	additionalArguments: '--package-manager=pip'
 	  
         )
       }
