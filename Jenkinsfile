@@ -2,10 +2,10 @@ pipeline {
   agent any
 
   stages {
-    stage('Build') {
-      steps {
-        echo 'Building...'
-      }
+    stage('Git Clone') {
+            steps{
+        git url: 'https://github.com/shwetha007/pygoat.git'
+            } 
     }
     stage('Test') {
 	tools {
@@ -17,8 +17,8 @@ pipeline {
           snykInstallation: 'mySnyk',
           snykTokenId: 'mySnkToken',
           // place other parameters here
- 	  //targetFile: 'requirements.txt',
-	additionalArguments: '--package-manager=pip --command=python3 -- --allow-missing'
+ 	  targetFile: 'Dockerfile',
+	//additionalArguments: '--package-manager=pip --command=python3 -- --allow-missing'
 	  
         )
       }
