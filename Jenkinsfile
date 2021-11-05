@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Git Clone') {
             steps{
-        git url: 'https://github.com/shwetha007/pygoat.git'
+        git url: 'https://github.com/buildpacks/sample-java-app.git'
             } 
     }
     stage('Test') {
@@ -17,7 +17,7 @@ pipeline {
           snykInstallation: 'mySnyk',
           snykTokenId: 'mySnkToken',
           // place other parameters here
- 	  targetFile: 'Dockerfile',
+ 	  //targetFile: 'Dockerfile',
 	//additionalArguments: '--package-manager=pip --command=python3 -- --allow-missing'
 	  
         )
